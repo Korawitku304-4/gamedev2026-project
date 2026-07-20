@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="PackedScene" uid="uid://b38rc6g1ful8w" path="res://idle.tscn" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=343263280]
+
+[node name="idle" parent="." unique_id=1384689349 instance=ExtResource("1_wtcfe")]
+position = Vector2(481, 498)

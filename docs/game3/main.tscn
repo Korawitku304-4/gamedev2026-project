@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://g4woadabn7p2" path="res://punch.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dl5lk0w7rkaic" path="res://jump.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b38rc6g1ful8w" path="res://idle.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bu8duowonxjf0" path="res://walk.tscn" id="5_lquwl"]
+
+[node name="Node2D" type="Node2D" unique_id=98448921]
+position = Vector2(31, 100)
+script = ExtResource("1_1bvp3")
+
+[node name="idle4" parent="." unique_id=1384689349 instance=ExtResource("1_h2yge")]
+position = Vector2(195, 302)
+
+[node name="lleg" parent="idle4/Skeleton2D/Body" parent_id_path=PackedInt32Array(1384689349, 2111057438) index="0" unique_id=1712103328]
+scale = Vector2(0.9999998, 0.9999998)
+
+[node name="rleg" parent="idle4/Skeleton2D/Body" parent_id_path=PackedInt32Array(1384689349, 2111057438) index="1" unique_id=1496711117]
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="lhand" parent="idle4/Skeleton2D/Body/arm" parent_id_path=PackedInt32Array(1384689349, 1673965603) index="0" unique_id=139395135]
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="arm3" parent="idle4/Skeleton2D/Body" parent_id_path=PackedInt32Array(1384689349, 2111057438) index="4" unique_id=1232065649]
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="idle2" parent="." unique_id=1681277166 instance=ExtResource("2_1bvp3")]
+position = Vector2(472, 380)
+
+[node name="Head" parent="idle2/Skeleton2D/Body" parent_id_path=PackedInt32Array(1681277166, 2111057438) index="2" unique_id=1397517086]
+scale = Vector2(0.9999997, 0.9999997)
+
+[node name="arm3" parent="idle2/Skeleton2D/Body" parent_id_path=PackedInt32Array(1681277166, 2111057438) index="4" unique_id=1232065649]
+scale = Vector2(0.99999964, 0.99999964)
+
+[node name="AnimationPlayer" parent="idle2" index="2" unique_id=311143716]
+root_node = NodePath("../../idle2")
+
+[node name="idle" parent="." unique_id=252857489 instance=ExtResource("3_lquwl")]
+position = Vector2(757, 353)
+
+[node name="Body" parent="idle/Skeleton2D" parent_id_path=PackedInt32Array(252857489, 436748855) index="0" unique_id=2111057438]
+position = Vector2(24, -96)
+
+[node name="lleg" parent="idle/Skeleton2D/Body" index="0" unique_id=1712103328]
+position = Vector2(-75, 41)
+
+[node name="rleg" parent="idle/Skeleton2D/Body" index="1" unique_id=1496711117]
+position = Vector2(20, 40)
+
+[node name="Head" parent="idle/Skeleton2D/Body" index="2" unique_id=1397517086]
+rotation = -0.3138701
+
+[node name="arm" parent="idle/Skeleton2D/Body" index="3" unique_id=1673965603]
+rotation = -0.14174284
+scale = Vector2(0.9999989, 0.9999989)
+
+[node name="arm3" parent="idle/Skeleton2D/Body" index="4" unique_id=1232065649]
+rotation = 0.17432767
+scale = Vector2(0.9999992, 0.9999992)
+
+[node name="idle3" parent="." unique_id=1636187281 instance=ExtResource("5_lquwl")]
+position = Vector2(762, 374)
+
+[node name="Body" parent="idle3/Skeleton2D" parent_id_path=PackedInt32Array(1636187281, 436748855) index="0" unique_id=2111057438]
+position = Vector2(28, -117)
+
+[node name="lleg" parent="idle3/Skeleton2D/Body" index="0" unique_id=1712103328]
+position = Vector2(-75, 53)
+rotation = 0.6082888
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="rleg" parent="idle3/Skeleton2D/Body" index="1" unique_id=1496711117]
+position = Vector2(20, 52)
+rotation = -0.6076282
+
+[node name="Head" parent="idle3/Skeleton2D/Body" index="2" unique_id=1397517086]
+rotation = -0.3141918
+
+[node name="arm" parent="idle3/Skeleton2D/Body" index="3" unique_id=1673965603]
+rotation = -0.46432158
+
+[node name="arm3" parent="idle3/Skeleton2D/Body" index="4" unique_id=1232065649]
+rotation = 0.7354282
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=689713698]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=928939095]
+offset_left = 261.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 32
+
+[node name="AnimLabel" type="Label" parent="CanvasLayer" unique_id=839319717]
+offset_left = 256.0
+offset_top = 103.0
+offset_right = 296.0
+offset_bottom = 148.0
+theme_override_font_sizes/font_size = 32
+
+[editable path="idle4"]
+[editable path="idle2"]
+[editable path="idle"]
+[editable path="idle3"]
